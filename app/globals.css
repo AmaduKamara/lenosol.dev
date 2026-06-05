@@ -4,3 +4,10 @@ body {
   background-color: #18262a;
   font-size: 14px;
 }
+
+.home-hero {
+  background: url("../app/home-hero-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

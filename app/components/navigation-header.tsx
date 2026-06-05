@@ -61,7 +61,7 @@ const NavigationHeader = () => {
         <div className='flex gap-5 items-center'>
           <Link
             href='/quote'
-            className='bg-cyan-500 py-3 px-6 text-white flex items-center'
+            className='bg-cyan-500 py-3 px-6 text-white flex items-center border border-cyan-500 hover:bg-transparent transition-all ease-in-out duration-300'
           >
             Get a Quote
             <MdKeyboardArrowRight size={20} className='text-white' />
@@ -69,7 +69,7 @@ const NavigationHeader = () => {
 
           <button
             type='button'
-            className=' bg-slate-50 px-6 py-4 border-2 '
+            className=' bg-slate-50 px-6 py-4 border-2 hover:bg-slate-200 cursor-pointer'
             title='Open menu'
           >
             <CgMenuRight size={24} />
