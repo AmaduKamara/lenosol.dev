@@ -6,7 +6,9 @@ body {
 }
 
 .home-hero {
-  background: url("../app/home-hero-bg.png");
+  background:
+    linear-gradient(to bottom, rgba(24, 38, 42, 0.102), rgba(15, 25, 27, 0.8)),
+    url("../app/home-hero.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
