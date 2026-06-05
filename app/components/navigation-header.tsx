@@ -3,9 +3,9 @@ import TopBar from "./top-bar";
 import Link from "next/link";
 import { CgMenuRight } from "react-icons/cg";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import Image from "next/image";
 
 import lenosol from "../lenosol-logo-white.png";
-import Image from "next/image";
 
 const NavigationHeader = () => {
   return (
