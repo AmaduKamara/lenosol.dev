@@ -48,22 +48,22 @@ const TopBar = () => {
           <ul className='flex gap-5 items-center'>
             <li>
               <a href='#'>
-                <FaFacebookF size={10} className='text-slate-100' />
+                <FaFacebookF size={12} className='text-slate-100' />
               </a>
             </li>
             <li>
               <a href='#'>
-                <FaX size={10} className='text-slate-100' />
+                <FaX size={12} className='text-slate-100' />
               </a>
             </li>
             <li>
               <a href='#'>
-                <FaLinkedin size={10} className='text-slate-100' />
+                <FaLinkedin size={12} className='text-slate-100' />
               </a>
             </li>
             <li>
               <a href='#'>
-                <FaYoutube size={10} className='text-slate-100' />
+                <FaYoutube size={12} className='text-slate-100' />
               </a>
             </li>
           </ul>
