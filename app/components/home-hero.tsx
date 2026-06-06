@@ -22,7 +22,7 @@ const HomeHero = () => {
       </div>
 
       <div className='flex gap-5 mt-16'>
-        <div className='w-2/5 pr-24'>
+        <div className='w-2/5 pr-24 pt-20'>
           <p className='text-slate-100 text-lg'>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
             recusandae aliquam repudiandae quibusdam error reprehenderit!

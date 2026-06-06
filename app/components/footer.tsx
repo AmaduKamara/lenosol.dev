@@ -16,7 +16,7 @@ const Footer = () => {
         <div className='w-2/3'>
           <h3 className='text-slate-100 text-2xl font-bold'>Newsletter</h3>
           <div className='mt-5 pr-24'>
-            <p className='text-slate-200'>
+            <p className='text-slate-200 leading-6 pr-16'>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Voluptatibus corporis, optio minus dolores veniam perspiciatis
               quidem debitis dolor quis quaerat.
@@ -91,9 +91,12 @@ const Footer = () => {
       {/* Bottom footer */}
       <div className=' pl-56 pr-56  mt-16'>
         <div className='border border-slate-600 relative'>
-          <div className='bg-slate-100 w-12 h-12 absolute top-0 left-[50%] -mt-6 rounded-full flex justify-center items-center shadow-2xl cursor-pointer'>
+          <a
+            href='#'
+            className='bg-slate-100 w-12 h-12 absolute top-0 left-[50%] -mt-6 rounded-full flex justify-center items-center shadow-2xl cursor-pointer'
+          >
             <FaArrowUp size={20} />
-          </div>
+          </a>
         </div>
 
         <div className='flex justify-between gap-5 mt-6'>
