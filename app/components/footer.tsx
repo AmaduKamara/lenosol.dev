@@ -7,7 +7,10 @@ import { FaLocationPin, FaArrowUp } from "react-icons/fa6";
 const Footer = () => {
   return (
     <footer className='footer py-16'>
-      <h2 id='footer-text' className='text-white font-bold text-[150px]'>
+      <h2
+        id='footer-text'
+        className='font-bold text-[8.5vw] text-center text-cyan-500'
+      >
         Get In Touch <span className='text-slate-300'>Contact</span> US
       </h2>
 
