@@ -1,14 +1,44 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 
 import ClientStats from "./client-stats";
+import MissionVision from "./toggle-mission-vision";
 
 import lenosolLogo from "@/app/lonosol-logo.png";
 import lenosolLogoWhite from "@/app/lenosol-logo-white.png";
 import amkam from "@/app/Amkam.jpg";
 
+const data = [
+  {
+    title: "Our Mission",
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam dignissimos possimus libero voluptas dolor facilis dolorum fugit vitae dolores enim dicta, minima unde, quasi veniam repudiandae,iure voluptate iste reiciendis.",
+  },
+  {
+    title: "Our Vision",
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam dignissimos possimus libero voluptas dolor facilis dolorum fugit vitae dolores enim dicta, minima unde, quasi veniam repudiandae,iure voluptate iste reiciendis.",
+  },
+  {
+    title: "Our Philosophy",
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam dignissimos possimus libero voluptas dolor facilis dolorum fugit vitae dolores enim dicta, minima unde, quasi veniam repudiandae,iure voluptate iste reiciendis.",
+  },
+  {
+    title: "Our Strategy",
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam dignissimos possimus libero voluptas dolor facilis dolorum fugit vitae dolores enim dicta, minima unde, quasi veniam repudiandae,iure voluptate iste reiciendis.",
+  },
+];
+
 import { MdKeyboardArrowRight } from "react-icons/md";
 const HomeAbout = () => {
+  // First item open by default
+  const [activeIndex, setActiveIndex] = useState(0);
+
   return (
     <section className='footer py-10 home-about'>
       <h2
@@ -51,7 +81,7 @@ const HomeAbout = () => {
         </div>
       </div>
 
-      <div className='flex gap-10 m-8'>
+      <div className='flex gap-10 m-8 px-10'>
         <div className='w-4/7 relative'>
           <Image src={amkam} alt='Amkam' className='w-full' />
           <div className='p-4 bg-cyan-500 w-42 h-32 flex justify-center items-center absolute bottom-0 left-0'>
@@ -96,6 +126,36 @@ const HomeAbout = () => {
               text='Best Completed Projects'
             />
           </div>
+        </div>
+      </div>
+
+      {/* Growth and Development */}
+      <div className='py-10 flex gap-32 container mx-auto mt-16 '>
+        <div className='w-5/9 md:pl-10 lg:pl-32'>
+          <p className='text-slate-200 text-xl font-bold'>
+            Growth & Development Mindset
+          </p>
+          <h2 className='text-slate-100 font-bold text-2xl md:text-3xl lg:text-5xl mt-3'>
+            Modern Technology and
+            <br />
+            <span className='font-thin'>Advancement Incentives</span>{" "}
+          </h2>
+
+          <div>
+            {data.map((item, index) => (
+              <MissionVision
+                key={index}
+                title={item.title}
+                content={item.content}
+                isOpen={activeIndex === index}
+                onToggle={() => setActiveIndex(index)}
+              />
+            ))}
+          </div>
+        </div>
+
+        <div className='w-4/9'>
+          <Image src={amkam} alt='Amkam' />
         </div>
       </div>
     </section>
