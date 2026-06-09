@@ -1,5 +1,4 @@
 import Link from "next/link";
-import React from "react";
 
 import { FaEnvelope, FaPhone } from "react-icons/fa";
 import { FaLocationPin, FaArrowUp } from "react-icons/fa6";
@@ -92,10 +91,12 @@ const Footer = () => {
       </div>
 
       {/* Bottom footer */}
-      <div className=' pl-56 pr-56  mt-16'>
+      <div className='pl-56 pr-56  mt-16'>
         <div className='border border-slate-600 relative'>
           <a
             href='#'
+            title='Back to top'
+            aria-label='Back to top'
             className='bg-slate-100 w-12 h-12 absolute top-0 left-[50%] -mt-6 rounded-full flex justify-center items-center shadow-2xl cursor-pointer'
           >
             <FaArrowUp size={20} />
