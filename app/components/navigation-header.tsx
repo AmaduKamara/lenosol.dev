@@ -9,7 +9,7 @@ import lenosol from "../lenosol-logo-white.png";
 
 const NavigationHeader = () => {
   return (
-    <header>
+    <header className='sticky top-0 z-100 bg-[#18262a] shadow-2xl'>
       <TopBar />
       <div className='border-t border-b border-gray-600 pl-16 flex justify-between items-center'>
         {/* Logo */}

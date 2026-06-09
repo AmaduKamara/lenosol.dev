@@ -21,11 +21,14 @@ const HomeHero = () => {
         </h1>
       </div>
 
-      <div className='flex gap-5 mt-16'>
+      <div className='flex gap-5 mt-10'>
         <div className='w-2/5 pr-24 pt-20'>
           <p className='text-slate-100 text-lg'>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea
-            recusandae aliquam repudiandae quibusdam error reprehenderit!
+            We&apos;re a software design agency on a mission to bridge the gap
+            between businesses, organizations and Innovation through custom
+            software and automations. We&apos;re here to help scale your
+            business and put it on the internet and eventually make you stand
+            out from the crowd.
           </p>
 
           <hr className='my-16 border-slate-500' />
@@ -45,7 +48,7 @@ const HomeHero = () => {
             </div>
           </div>
 
-          <div className='mt-16'>
+          <div className='mt-8'>
             <Link href='/services'>
               <button
                 type='button'
