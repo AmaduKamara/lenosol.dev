@@ -56,7 +56,7 @@ const HomeServices = () => {
             <p className='text-slate-100 leading-6'>
               Let&apos;s develop fast, secure, and scalable web application with
               custom, high-performing solutions that drive success for your
-              business!
+              business.
             </p>
 
             <div className='flex items-center gap-2 mt-5'>
@@ -99,7 +99,7 @@ const HomeServices = () => {
             </h3>
             <p className='text-slate-100 leading-6'>
               With our maintenance plans, you can be confident that your website
-              remains secure, up-to-date, and fully functional at all times! 🚀
+              remains secure, up-to-date, and fully functional at all times. 🚀
             </p>
 
             <div className='flex items-center gap-2 mt-5'>
@@ -208,7 +208,7 @@ const HomeServices = () => {
           <span className='underline italic font-bold text-slate-50'>
             Talk and Start
           </span>{" "}
-          IT Consultation
+          IT Consultations
         </p>
       </div>
     </section>
