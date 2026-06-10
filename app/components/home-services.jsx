@@ -41,7 +41,7 @@ const HomeServices = () => {
             <div className='flex items-center gap-2 mt-5'>
               <lLnk
                 href='#'
-                className='flex items-center gap-2 text-slate-100 border p-2'
+                className='flex items-center gap-2 text-slate-100 border p-2 hover:bg-cyan-500 hover:border-cyan-500 transition-all ease-in-out duration-500 cursor-pointer'
               >
                 <FaPlus className='text-slate-100' /> Read More
               </lLnk>
@@ -62,7 +62,7 @@ const HomeServices = () => {
             <div className='flex items-center gap-2 mt-5'>
               <Link
                 href='#'
-                className='flex items-center gap-2 text-slate-100 border p-2'
+                className='flex items-center gap-2 text-slate-100 border p-2 hover:bg-cyan-500 hover:border-cyan-500 transition-all ease-in-out duration-500'
               >
                 {" "}
                 <FaPlus className='text-slate-100' /> Read More
@@ -84,7 +84,7 @@ const HomeServices = () => {
             <div className='flex items-center gap-2 mt-5'>
               <Link
                 href='#'
-                className='flex border p-2 items-centergap-2  text-slate-100'
+                className='flex border p-2 items-center gap-2  text-slate-100 hover:bg-cyan-500 hover:border-cyan-500 transition-all ease-in-out duration-500'
               >
                 {" "}
                 <FaPlus className='text-slate-100' /> Read More
@@ -105,7 +105,7 @@ const HomeServices = () => {
             <div className='flex items-center gap-2 mt-5'>
               <Link
                 href='#'
-                className='flex items-center gap-2 text-slate-100 border p-2'
+                className='flex items-center gap-2 text-slate-100 border p-2 hover:bg-cyan-500 hover:border-cyan-500 transition-all ease-in-out duration-500'
               >
                 {" "}
                 <FaPlus className='text-slate-100' /> Read More
@@ -127,7 +127,7 @@ const HomeServices = () => {
             <div className='flex items-center gap-2 mt-5'>
               <Link
                 href='#'
-                className='flex items-center gap-2 text-slate-100 border p-2'
+                className='flex items-center gap-2 text-slate-100 border p-2 hover:bg-cyan-500 hover:border-cyan-500 transition-all ease-in-out duration-500'
               >
                 {" "}
                 <FaPlus className='text-slate-100' /> Read More
@@ -149,7 +149,7 @@ const HomeServices = () => {
             <div className='flex items-center gap-2 mt-5'>
               <Link
                 href='#'
-                className='flex items-center gap-2 text-slate-100 border p-2'
+                className='flex items-center gap-2 text-slate-100 border p-2 hover:bg-cyan-500 hover:border-cyan-500 transition-all ease-in-out duration-500'
               >
                 {" "}
                 <FaPlus className='text-slate-100' /> Read More
@@ -171,7 +171,7 @@ const HomeServices = () => {
             <div className='flex items-center gap-2 mt-5'>
               <Link
                 href='#'
-                className='flex items-center gap-2 text-slate-100 border p-2'
+                className='flex items-center gap-2 text-slate-100 border p-2 hover:bg-cyan-500 hover:border-cyan-500 transition-all ease-in-out duration-500'
               >
                 {" "}
                 <FaPlus className='text-slate-100' /> Read More
@@ -193,7 +193,7 @@ const HomeServices = () => {
             <div className='flex items-center gap-2 mt-5'>
               <Link
                 href='#'
-                className='flex items-center gap-2 text-slate-100 border p-2'
+                className='flex items-center gap-2 text-slate-100 border p-2 hover:bg-cyan-500 hover:border-cyan-500 transition-all ease-in-out duration-500'
               >
                 {" "}
                 <FaPlus className='text-slate-100' /> Read More
