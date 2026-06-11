@@ -1,7 +1,10 @@
 import Link from "next/link";
-import React from "react";
 import { FaPlus } from "react-icons/fa";
 import { FaComputer } from "react-icons/fa6";
+import Image from "next/image";
+
+import webDesign from "@/app/images/Lenosol-Web-Design.jpg";
+import webDevelopment from "@/app/images/Lenosol-Web-Development.jpg";
 
 const HomeServices = () => {
   return (
@@ -38,6 +41,10 @@ const HomeServices = () => {
               that captivate, convert, and elevate your online presence.
             </p>
 
+            <div className='w-full my-5'>
+              <Image src={webDesign} className='w-full' alt='Web Design' />
+            </div>
+
             <div className='flex items-center gap-2 mt-5'>
               <lLnk
                 href='#'
@@ -58,6 +65,10 @@ const HomeServices = () => {
               custom, high-performing solutions that drive success for your
               business.
             </p>
+
+            <div className='w-full my-5'>
+              <Image src={webDevelopment} className='w-full' alt='Web Design' />
+            </div>
 
             <div className='flex items-center gap-2 mt-5'>
               <Link
@@ -81,6 +92,10 @@ const HomeServices = () => {
               professionalism.
             </p>
 
+            <div className='w-full my-5'>
+              <Image src={webDesign} className='w-full' alt='Web Design' />
+            </div>
+
             <div className='flex items-center gap-2 mt-5'>
               <Link
                 href='#'
@@ -101,6 +116,10 @@ const HomeServices = () => {
               With our maintenance plans, you can be confident that your website
               remains secure, up-to-date, and fully functional at all times. 🚀
             </p>
+
+            <div className='w-full my-5'>
+              <Image src={webDesign} className='w-full' alt='Web Design' />
+            </div>
 
             <div className='flex items-center gap-2 mt-5'>
               <Link
@@ -124,6 +143,10 @@ const HomeServices = () => {
               intuitive and engaging experiences.
             </p>
 
+            <div className='w-full my-5'>
+              <Image src={webDesign} className='w-full' alt='Web Design' />
+            </div>
+
             <div className='flex items-center gap-2 mt-5'>
               <Link
                 href='#'
@@ -145,6 +168,10 @@ const HomeServices = () => {
               offering tailored solutions, strategic insights, and guidance to
               drive innovation and unlock growth.
             </p>
+
+            <div className='w-full my-5'>
+              <Image src={webDesign} className='w-full' alt='Web Design' />
+            </div>
 
             <div className='flex items-center gap-2 mt-5'>
               <Link
@@ -168,6 +195,10 @@ const HomeServices = () => {
               in today&apos;s tech-driven world.
             </p>
 
+            <div className='w-full my-5'>
+              <Image src={webDesign} className='w-full' alt='Web Design' />
+            </div>
+
             <div className='flex items-center gap-2 mt-5'>
               <Link
                 href='#'
@@ -189,6 +220,10 @@ const HomeServices = () => {
               that resonates with your audience, elevates your presence, and
               stands out through expert design and strategy.
             </p>
+
+            <div className='w-full my-5'>
+              <Image src={webDesign} className='w-full' alt='Web Design' />
+            </div>
 
             <div className='flex items-center gap-2 mt-5'>
               <Link
