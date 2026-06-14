@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { MdKeyboardArrowRight } from "react-icons/md";
 
-import amkam from "../Amkam.jpg";
+import amkam from "../images/Amkam.jpg";
 
 const HomeHero = () => {
   return (

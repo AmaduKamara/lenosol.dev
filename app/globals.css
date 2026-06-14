@@ -8,7 +8,7 @@ body {
 .home-hero {
   background:
     linear-gradient(to bottom, rgba(24, 38, 42, 0.102), rgba(15, 25, 27, 0.8)),
-    url("../app/home-hero.png");
+    url("../app/images/home-hero.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -17,7 +17,7 @@ body {
 .home-about {
   background:
     linear-gradient(to bottom, rgba(24, 38, 42, 0.102), rgba(15, 25, 27, 0.8)),
-    url("../app/software-development-hero-bg.png");
+    url("../app/images/software-development-hero-bg.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -26,7 +26,7 @@ body {
 .home-services {
   background:
     linear-gradient(to bottom, rgba(24, 38, 42, 0.102), rgba(15, 25, 27, 0.8)),
-    url("../app/about-hero-bg.png");
+    url("../app/images/about-hero-bg.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -35,7 +35,7 @@ body {
 .home-teams {
   background:
     linear-gradient(to bottom, rgba(24, 38, 42, 0.102), rgba(15, 25, 27, 0.8)),
-    url("../app/home-hero.png");
+    url("../app/images/home-hero.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -44,7 +44,7 @@ body {
 .contact-us {
   background:
     linear-gradient(to bottom, rgba(24, 38, 42, 0.102), rgba(15, 25, 27, 0.8)),
-    url("../app/contact-hero.png");
+    url("../app/images/contact-hero.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -53,7 +53,7 @@ body {
 .footer {
   background:
     linear-gradient(to right, rgba(15, 25, 27, 0.65), rgba(15, 25, 27, 0.22)),
-    url("../app/home-hero.png");
+    url("../app/images/home-hero.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

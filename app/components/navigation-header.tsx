@@ -5,7 +5,7 @@ import { CgMenuRight } from "react-icons/cg";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import Image from "next/image";
 
-import lenosol from "../lenosol-logo-white.png";
+import lenosol from "../images/lenosol-logo-white.png";
 
 const NavigationHeader = () => {
   return (

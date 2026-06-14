@@ -2,7 +2,7 @@ import Image from "next/image";
 import { FaDotCircle, FaEnvelope, FaQuoteLeft, FaUser } from "react-icons/fa";
 
 import client1 from "@/app/images/team-member.png";
-import amkam from "../Amkam.jpg";
+import amkam from "../images/Amkam.jpg";
 import Link from "next/link";
 import { MdKeyboardArrowRight } from "react-icons/md";
 

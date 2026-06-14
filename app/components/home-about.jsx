@@ -7,9 +7,9 @@ import { useState } from "react";
 import ClientStats from "./client-stats";
 import MissionVision from "./toggle-mission-vision";
 
-import lenosolLogo from "@/app/lonosol-logo.png";
-import lenosolLogoWhite from "@/app/lenosol-logo-white.png";
-import amkam from "@/app/Amkam.jpg";
+import lenosolLogo from "@/app/images/lonosol-logo.png";
+import lenosolLogoWhite from "@/app/images/lenosol-logo-white.png";
+import amkam from "@/app/images/Amkam.jpg";
 
 const data = [
   {
