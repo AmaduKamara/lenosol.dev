@@ -1,14 +1,13 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
 
 import ClientStats from "./client-stats";
-import MissionVision from "./toggle-mission-vision";
 
 import lenosolLogo from "@/app/images/lonosol-logo.png";
 import lenosolLogoWhite from "@/app/images/lenosol-logo-white.png";
+
+import Faqs from "./faqs";
+
 import amkam from "@/app/images/Amkam.jpg";
 
 const data = [
@@ -35,10 +34,8 @@ const data = [
 ];
 
 import { MdKeyboardArrowRight } from "react-icons/md";
-const HomeAbout = () => {
-  // First item open by default
-  const [activeIndex, setActiveIndex] = useState(0);
 
+const HomeAbout = () => {
   return (
     <section className='footer py-10 home-about'>
       <h2
@@ -130,34 +127,7 @@ const HomeAbout = () => {
       </div>
 
       {/* Growth and Development */}
-      <div className='py-10 flex gap-32 container mx-auto mt-16 '>
-        <div className='w-5/9 md:pl-10 lg:pl-32'>
-          <p className='text-slate-200 text-xl font-bold'>
-            Growth & Development Mindset
-          </p>
-          <h2 className='text-slate-100 font-bold text-2xl md:text-3xl lg:text-5xl mt-3'>
-            Modern Technology and
-            <br />
-            <span className='font-thin'>Advancement Incentives</span>{" "}
-          </h2>
-
-          <div>
-            {data.map((item, index) => (
-              <MissionVision
-                key={index}
-                title={item.title}
-                content={item.content}
-                isOpen={activeIndex === index}
-                onToggle={() => setActiveIndex(index)}
-              />
-            ))}
-          </div>
-        </div>
-
-        <div className='w-4/9'>
-          <Image src={amkam} alt='Amkam' />
-        </div>
-      </div>
+      <Faqs data={data} />
     </section>
   );
 };
