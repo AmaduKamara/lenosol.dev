@@ -21,7 +21,7 @@ const NavigationHeader = () => {
           </div>
 
           {/* Nav links */}
-          <ul className='flex gap-5 pl-6'>
+          <ul className='flex gap-8 pl-6'>
             <li>
               <Link href='/' className='text-white font-semibold'>
                 Home
@@ -43,8 +43,8 @@ const NavigationHeader = () => {
               </Link>
             </li>
             <li>
-              <Link href='/projects' className='text-white font-semibold'>
-                Projects
+              <Link href='/team' className='text-white font-semibold'>
+                Team
               </Link>
             </li>
             <li>
