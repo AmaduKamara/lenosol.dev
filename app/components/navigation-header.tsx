@@ -15,13 +15,15 @@ const NavigationHeader = () => {
         {/* Logo */}
         <div className='flex items-center gap-5'>
           <div className='border-r w-42 border-slate-200'>
-            <Image src={lenosol} alt='Lenosol' className='w-32' />
+            <Link href='/'>
+              <Image src={lenosol} alt='Lenosol' className='w-32' />
+            </Link>
           </div>
 
           {/* Nav links */}
           <ul className='flex gap-5 pl-6'>
             <li>
-              <Link href='/home' className='text-white font-semibold'>
+              <Link href='/' className='text-white font-semibold'>
                 Home
               </Link>
             </li>

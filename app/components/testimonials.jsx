@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FaDotCircle, FaEnvelope, FaQuoteLeft } from "react-icons/fa";
+import { FaDotCircle, FaEnvelope, FaQuoteLeft, FaUser } from "react-icons/fa";
 
 import client1 from "@/app/images/team-member.png";
 import amkam from "../Amkam.jpg";
@@ -101,7 +101,7 @@ const Testimonials = () => {
                   placeholder='Name'
                   className='focus:outline-none w-full pr-5'
                 />
-                <FaEnvelope className='absolute top-0 right-0 mr-5 mt-4 text-gray-500' />
+                <FaUser className='absolute top-0 right-0 mr-5 mt-4 text-gray-500' />
               </div>
               <div className='flex items-center bg-white py-2 md:py-3 px-5 flex-1 relative'>
                 <input
