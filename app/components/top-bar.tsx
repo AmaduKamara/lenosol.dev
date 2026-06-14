@@ -29,17 +29,12 @@ const TopBar = () => {
       <div>
         <div className='flex gap-5 items-center'>
           <ul className='flex gap-5 items-center'>
-            <li>
-              <Link href='/help' className='text-slate-200'>
-                Help
-              </Link>
-            </li>
-            <li>
+            <li className='font-bold'>
               <Link href='/help' className='text-slate-200'>
                 Support
               </Link>
             </li>
-            <li>
+            <li className='font-bold'>
               <Link href='/help' className='text-slate-200'>
                 FAQs
               </Link>
