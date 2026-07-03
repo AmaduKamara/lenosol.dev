@@ -1,252 +1,102 @@
+"use client";
+import React from "react";
 import Link from "next/link";
-import { FaPlus } from "react-icons/fa";
-import { FaComputer } from "react-icons/fa6";
+import { FaPlus, FaComputer } from "react-icons/fa6";
 import Image from "next/image";
-
+import { motion } from "framer-motion";
 import webDesign from "@/app/images/Lenosol-Web-Design.jpg";
-import webDevelopment from "@/app/images/Lenosol-Web-Development.jpg";
+
+const services = [
+  {
+    title: "Web Design",
+    desc: "Create stunning, modern, and user-friendly websites.",
+  },
+  {
+    title: "Web Development",
+    desc: "Develop fast, secure, and scalable web applications.",
+  },
+  {
+    title: "Hosting & SEO",
+    desc: "Secure your identity with reliable hosting and SEO.",
+  },
+  {
+    title: "Maintenance",
+    desc: "Keep your website secure, up-to-date, and functional.",
+  },
+  {
+    title: "UI/UX Design",
+    desc: "Expert design that combines visuals with functionality.",
+  },
+  {
+    title: "Tech Consulting",
+    desc: "Strategic insights to drive innovation and growth.",
+  },
+  {
+    title: "IT Training",
+    desc: "Personalized, hands-on learning for your career.",
+  },
+  { title: "Branding", desc: "Memorable brand identity that resonates." },
+];
 
 const HomeServices = () => {
   return (
-    <section className='footer pt-10 home-services'>
-      <h2
-        id='footer-text'
-        className='font-bold text-[8.2vw] text-center text-slate-400'
+    <section className='py-20 px-6 bg-[#18262a]'>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className='text-center mb-16'
       >
-        Explore <span className='text-cyan-200'>Popular</span>{" "}
-        <span className='text-cyan-500'>Services</span>
-      </h2>
+        <h2 className='text-[7.9vw] font-bold text-slate-400'>
+          Explore <span className='text-cyan-200'>Popular</span>{" "}
+          <span className='text-cyan-500'>Services</span>
+        </h2>
+      </motion.div>
 
-      <div className='mt-10 container mx-auto'>
-        <div>
-          <p className='text-slate-200 text-xl font-bold text-center'>
-            Growth & Development Mindset
-          </p>
-          <h2 className='text-slate-100 font-bold text-2xl md:text-3xl lg:text-5xl mt-3 text-center'>
-            Modern Technology and
-            <br />
-            <span className='font-thin'>Advancement Incentives</span>{" "}
-          </h2>
-        </div>
-
-        {/* SERVICES */}
-        <div className='grid gird-cols-1 sm:grid-cols-2 md:grid-cols-4 mt-16 mb-0'>
-          <div className='p-8 border border-slate-500'>
-            <FaComputer className='text-slate-200' size={40} />
-            <h3 className='text-xl text-slate-50 font-semibold mt-4 mb-2'>
-              Web Design
+      <div className='container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>
+        {services.map((service, idx) => (
+          <motion.div
+            key={idx}
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: idx * 0.1 }}
+            className='p-8 border border-slate-700 hover:border-cyan-500 transition-colors bg-[#1d2d31] group'
+          >
+            <FaComputer className='text-cyan-500 mb-4' size={40} />
+            <h3 className='text-xl text-white font-semibold mb-2'>
+              {service.title}
             </h3>
-            <p className='text-slate-100 leading-6'>
-              Let&apos;s create stunning, modern, and user-friendly websites
-              that captivate, convert, and elevate your online presence.
+            <p className='text-slate-300 text-sm leading-6 mb-6'>
+              {service.desc}
             </p>
 
-            <div className='w-full my-5'>
-              <Image src={webDesign} className='w-full' alt='Web Design' />
-            </div>
+            <Image
+              src={webDesign}
+              alt={service.title}
+              className='w-full h-32 object-cover mb-6 grayscale group-hover:grayscale-0 transition-all'
+            />
 
-            <div className='flex items-center gap-2 mt-5'>
-              <lLnk
-                href='#'
-                className='flex items-center gap-2 text-slate-100 border hover:bg-cyan-500 hover:border-cyan-500 transition-all ease-in-out duration-500 cursor-pointer rounded-full py-2 px-5'
-              >
-                <FaPlus className='text-slate-100' /> Read More
-              </lLnk>
-            </div>
-          </div>
-
-          <div className='p-8 border border-slate-500'>
-            <FaComputer className='text-slate-200' size={40} />
-            <h3 className='text-xl text-slate-50 font-semibold mt-4 mb-2'>
-              Web Development
-            </h3>
-            <p className='text-slate-100 leading-6'>
-              Let&apos;s develop fast, secure, and scalable web application with
-              custom, high-performing solutions that drive success for your
-              business.
-            </p>
-
-            <div className='w-full my-5'>
-              <Image src={webDevelopment} className='w-full' alt='Web Design' />
-            </div>
-
-            <div className='flex items-center gap-2 mt-5'>
-              <Link
-                href='#'
-                className='flex items-center gap-2 text-slate-100 border p-2 hover:bg-cyan-500 hover:border-cyan-500 transition-all ease-in-out duration-500 rounded-full py-2 px-5'
-              >
-                {" "}
-                <FaPlus className='text-slate-100' /> Read More
-              </Link>
-            </div>
-          </div>
-
-          <div className='p-8 border border-slate-500'>
-            <FaComputer className='text-slate-200' size={40} />
-            <h3 className='text-xl text-slate-50 font-semibold mt-4 mb-2'>
-              Domain & Email Hosting and SEO
-            </h3>
-            <p className='text-slate-100 leading-6'>
-              Let&apos;s secure your online identity with reliable domain and
-              email hosting services that simplify your needs and enhance your
-              professionalism.
-            </p>
-
-            <div className='w-full my-5'>
-              <Image src={webDesign} className='w-full' alt='Web Design' />
-            </div>
-
-            <div className='flex items-center gap-2 mt-5'>
-              <Link
-                href='#'
-                className='flex border p-2 items-center gap-2  text-slate-100 hover:bg-cyan-500 hover:border-cyan-500 transition-all ease-in-out duration-500 rounded-full py-2 px-5'
-              >
-                {" "}
-                <FaPlus className='text-slate-100' /> Read More
-              </Link>
-            </div>
-          </div>
-
-          <div className='p-8 border border-slate-500'>
-            <FaComputer className='text-slate-200' size={40} />
-            <h3 className='text-xl text-slate-50 font-semibold mt-4 mb-2'>
-              Website Maintenance Service
-            </h3>
-            <p className='text-slate-100 leading-6'>
-              With our maintenance plans, you can be confident that your website
-              remains secure, up-to-date, and fully functional at all times. 🚀
-            </p>
-
-            <div className='w-full my-5'>
-              <Image src={webDesign} className='w-full' alt='Web Design' />
-            </div>
-
-            <div className='flex items-center gap-2 mt-5'>
-              <Link
-                href='#'
-                className='flex items-center gap-2 text-slate-100 border p-2 hover:bg-cyan-500 hover:border-cyan-500 transition-all ease-in-out duration-500 rounded-full py-2 px-5'
-              >
-                {" "}
-                <FaPlus className='text-slate-100' /> Read More
-              </Link>
-            </div>
-          </div>
-
-          <div className='p-8 border border-slate-500'>
-            <FaComputer className='text-slate-200' size={40} />
-            <h3 className='text-xl text-slate-50 font-semibold mt-4 mb-2'>
-              UI/UX Design
-            </h3>
-            <p className='text-slate-100 leading-6'>
-              Let&apos;s transform your product with expert UI/UX design that
-              combines stunning visuals with seamless functionality, creating
-              intuitive and engaging experiences.
-            </p>
-
-            <div className='w-full my-5'>
-              <Image src={webDesign} className='w-full' alt='Web Design' />
-            </div>
-
-            <div className='flex items-center gap-2 mt-5'>
-              <Link
-                href='#'
-                className='flex items-center gap-2 text-slate-100 border p-2 hover:bg-cyan-500 hover:border-cyan-500 transition-all ease-in-out duration-500 rounded-full py-2 px-5'
-              >
-                {" "}
-                <FaPlus className='text-slate-100' /> Read More
-              </Link>
-            </div>
-          </div>
-
-          <div className='p-8 border border-slate-500'>
-            <FaComputer className='text-slate-200' size={40} />
-            <h3 className='text-xl text-slate-50 font-semibold mt-4 mb-2'>
-              Tech Consulting
-            </h3>
-            <p className='text-slate-100 leading-6'>
-              Let&apos;s empower your business with expert tech consulting
-              offering tailored solutions, strategic insights, and guidance to
-              drive innovation and unlock growth.
-            </p>
-
-            <div className='w-full my-5'>
-              <Image src={webDesign} className='w-full' alt='Web Design' />
-            </div>
-
-            <div className='flex items-center gap-2 mt-5'>
-              <Link
-                href='#'
-                className='flex items-center gap-2 text-slate-100 border p-2 hover:bg-cyan-500 hover:border-cyan-500 transition-all ease-in-out duration-500 rounded-full py-2 px-5'
-              >
-                {" "}
-                <FaPlus className='text-slate-100' /> Read More
-              </Link>
-            </div>
-          </div>
-
-          <div className='p-8 border border-slate-500'>
-            <FaComputer className='text-slate-200' size={40} />
-            <h3 className='text-xl text-slate-50 font-semibold mt-4 mb-2'>
-              IT Skills Training
-            </h3>
-            <p className='text-slate-100 leading-6'>
-              Let&apos;s enhance your career with expert IT skills training,
-              offering personalized, hands-on learning to equip your for success
-              in today&apos;s tech-driven world.
-            </p>
-
-            <div className='w-full my-5'>
-              <Image src={webDesign} className='w-full' alt='Web Design' />
-            </div>
-
-            <div className='flex items-center gap-2 mt-5'>
-              <Link
-                href='#'
-                className='flex items-center gap-2 text-slate-100 border p-2 hover:bg-cyan-500 hover:border-cyan-500 transition-all ease-in-out duration-500 rounded-full py-2 px-5'
-              >
-                {" "}
-                <FaPlus className='text-slate-100' /> Read More
-              </Link>
-            </div>
-          </div>
-
-          <div className='p-8 border border-slate-500'>
-            <FaComputer className='text-slate-200' size={40} />
-            <h3 className='text-xl text-slate-50 font-semibold mt-4 mb-2'>
-              Branding
-            </h3>
-            <p className='text-slate-100 leading-6'>
-              Let&apos;s transform your business with a memorable brand identity
-              that resonates with your audience, elevates your presence, and
-              stands out through expert design and strategy.
-            </p>
-
-            <div className='w-full my-5'>
-              <Image src={webDesign} className='w-full' alt='Web Design' />
-            </div>
-
-            <div className='flex items-center gap-2 mt-5'>
-              <Link
-                href='#'
-                className='flex items-center gap-2 text-slate-100 border p-2 hover:bg-cyan-500 hover:border-cyan-500 transition-all ease-in-out duration-500 rounded-full py-2 px-5'
-              >
-                {" "}
-                <FaPlus className='text-slate-100' /> Read More
-              </Link>
-            </div>
-          </div>
-        </div>
+            <Link
+              href='#'
+              className='inline-flex items-center gap-2 text-white border border-slate-600 rounded-full py-2 px-5 hover:bg-cyan-500 hover:border-cyan-500 transition-all'
+            >
+              <FaPlus /> Read More
+            </Link>
+          </motion.div>
+        ))}
       </div>
-      
-      <div className='bg-cyan-600 py-4 mt-16'>
-        <p className='text-center text-2xl tracking-wider'>
+
+      <motion.div
+        whileHover={{ scale: 1.02 }}
+        className='bg-cyan-600 py-8 mt-20 rounded-lg cursor-pointer'
+      >
+        <p className='text-center text-xl md:text-2xl text-white tracking-wider'>
           Let&apos;s{" "}
-          <span className='underline italic font-bold text-slate-50'>
-            Talk and Start
-          </span>{" "}
-          IT Consultations
+          <span className='underline italic font-bold'>Talk and Start</span> IT
+          Consultations
         </p>
-      </div>
+      </motion.div>
     </section>
   );
 };

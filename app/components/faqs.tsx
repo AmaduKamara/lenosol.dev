@@ -23,7 +23,7 @@ const Faqs: React.FC<FaqsProps> = ({ data }) => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
-      className='py-16 px-6 container mx-auto flex flex-col lg:flex-row gap-12 lg:gap-20 items-center'
+      className='pt-16 px-6 container mx-auto flex flex-col lg:flex-row gap-12 lg:gap-20 items-center'
     >
       {/* Left Content */}
       <div className='w-full lg:w-1/2'>
