@@ -8,7 +8,6 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import ClientStats from "./client-stats";
 import Faqs from "./faqs";
 import lenosolLogo from "@/app/images/lonosol-logo.png";
-import lenosolLogoWhite from "@/app/images/lenosol-logo-white.png";
 import amkam from "@/app/images/Amkam.jpg";
 
 const data = [
