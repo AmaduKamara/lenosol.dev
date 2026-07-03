@@ -1,71 +1,127 @@
+"use client";
+import { useState, useEffect } from "react";
 import Image from "next/image";
-
-import project from "@/app/images/project.jpg";
 import Link from "next/link";
-import { FaDotCircle, FaPlus } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { FaPlus, FaCircle } from "react-icons/fa";
+import project from "@/app/images/project.jpg";
+
+const projects = [
+  {
+    id: 1,
+    title: "Modern Web Platform",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.",
+  },
+  {
+    id: 2,
+    title: "Mobile App Solution",
+    desc: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+  },
+  {
+    id: 3,
+    title: "Enterprise Software",
+    desc: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  },
+  {
+    id: 4,
+    title: "Cloud Infrastructure",
+    desc: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
+  },
+];
 
 const CaseStudy = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
+  // Auto-slide every 5 seconds
+  useEffect(() => {
+    if (isPaused) return;
+
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % projects.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [isPaused]);
+
   return (
-    <section className='pt-10'>
-      <div className='mt-10 pl-16'>
-        <div>
-          <p className='text-slate-200 text-xl font-bold text-center'>
+    <section className='pt-20 overflow-hidden'>
+      <div className='max-w-7xl mx-auto px-6'>
+        <div className='text-center mb-12'>
+          <p className='text-cyan-400 font-bold uppercase tracking-widest text-sm'>
             Our Completed Projects
           </p>
-          <h2 className='text-slate-100 font-bold text-2xl md:text-3xl lg:text-5xl mt-3 text-center'>
-            Explore Our Most
-            <br />
-            <span className='font-thin'>
-              Successful Projects Case Studes
-            </span>{" "}
+          <h2 className='text-white font-bold text-3xl md:text-5xl mt-3'>
+            Explore Our Most <br />
+            <span className='font-thin text-slate-300'>
+              Successful Project Case Studies
+            </span>
           </h2>
         </div>
 
-        {/* Case Studies Sliders */}
-        <div>
-          <div className='flex gap-6 overflow-hidden'>
-            <div className='border border-slate-500 p-2 pl-10 w-350 mt-16'>
-              <div className='flex gap-24 relative'>
-                <div className='w-2/5 pt-10'>
-                  <p className='text-slate-200 text-lg font-bold'>
-                    Our Completed Projects
+        {/* Carousel Container */}
+        <div
+          className='relative w-full overflow-hidden'
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
+          <motion.div
+            className='flex'
+            animate={{ x: `-${currentIndex * 100}%` }}
+            transition={{ type: "spring", stiffness: 300, damping: 30 }}
+          >
+            {projects.map((projectItem) => (
+              <div
+                key={projectItem.id}
+                className='w-full flex-shrink-0 flex flex-col md:flex-row gap-12 items-center p-6 md:p-16 border border-slate-700 bg-[#1d2d31]'
+              >
+                <div className='md:w-1/2'>
+                  <p className='text-cyan-400 font-bold'>
+                    Case Study #{projectItem.id}
                   </p>
-                  <Link href={`/projects/1`}>
-                    <h4 className='text-3xl font-bold mt-6 text-cyan-500 hover:text-cyan-400'>
-                      Our Completed Projects
+                  <Link href={`/projects/${projectItem.id}`}>
+                    <h4 className='text-3xl md:text-4xl font-bold mt-4 text-white hover:text-cyan-400 transition-colors'>
+                      {projectItem.title}
                     </h4>
                   </Link>
-                  <p className='mt-5 text-slate-200 leading-7'>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Animi ipsa nemo at possimus aut blanditiis deserunt sint,
-                    sequi, nulla cumque, suscipit eum ad in commodi repudiandae
-                    illo neque voluptate labore!
+                  <p className='mt-6 text-slate-300 leading-8 text-lg'>
+                    {projectItem.desc}
                   </p>
-
-                  <div className='flex items-center gap-2 absolute bottom-0 mb-16'>
+                  <div className='mt-8'>
                     <Link
-                      href='#'
-                      className='flex items-center gap-2 text-slate-100 border p-2 hover:bg-cyan-500 hover:border-cyan-500 transition-all ease-in-out duration-500 rounded-full py-2 px-5'
+                      href={`/projects/${projectItem.id}`}
+                      className='inline-flex items-center gap-2 text-white border border-slate-500 py-3 px-6 rounded-full hover:bg-cyan-500 hover:border-cyan-500 transition-all duration-500'
                     >
-                      {" "}
-                      <FaPlus className='text-slate-100' /> Read More
+                      <FaPlus /> Read More
                     </Link>
                   </div>
                 </div>
-                <div className='3/5'>
-                  <Image src={project} alt='Project 1' />
+                <div className='md:w-1/2 w-full'>
+                  <Image
+                    src={project}
+                    alt={projectItem.title}
+                    className='w-full h-auto rounded-lg shadow-2xl'
+                  />
                 </div>
               </div>
-            </div>
-          </div>
+            ))}
+          </motion.div>
 
-          <div className='flex justify-center items-center mt-10'>
-            <div className='flex gap-3'>
-              <FaDotCircle className='text-slate-50 cursor-pointer' />
-              <FaDotCircle className='text-slate-50 cursor-pointer' />
-              <FaDotCircle className='text-slate-50 cursor-pointer' />
-              <FaDotCircle className='text-slate-50 cursor-pointer' />
-            </div>
+          {/* Indicators */}
+          <div className='flex justify-center items-center mt-10 gap-4'>
+            {projects.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => setCurrentIndex(idx)}
+                className={`transition-all duration-300 ${
+                  currentIndex === idx
+                    ? "text-cyan-500 scale-125"
+                    : "text-slate-500"
+                }`}
+              >
+                <FaCircle size={12} />
+              </button>
+            ))}
           </div>
         </div>
       </div>
