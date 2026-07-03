@@ -24,7 +24,7 @@ const Footer = () => {
             </p>
             <form className='mt-8 md:mt-12'>
               <div className='flex flex-col sm:flex-row gap-3'>
-                <div className='border border-slate-100 flex items-center gap-3 px-4 flex-grow'>
+                <div className='border border-slate-100 flex items-center gap-3 px-4 grow'>
                   <FaEnvelope className='text-slate-200' size={20} />
                   <input
                     type='text'
@@ -71,17 +71,17 @@ const Footer = () => {
             <h3 className='text-slate-100 text-2xl font-bold'>Location</h3>
             <div className='mt-5'>
               <p className='text-slate-100 flex gap-2 items-center'>
-                <FaLocationPin className='flex-shrink-0' /> 6 John Thorpe, Rokel, Freetown
+                <FaLocationPin className='shrink-0' /> 6 John Thorpe, Rokel, Freetown
               </p>
             </div>
             <div className='mt-6'>
               <h3 className='text-slate-100 text-lg font-semibold'>Contacts</h3>
               <p className='text-slate-100 flex gap-2 items-center my-2'>
-                <FaEnvelope className='flex-shrink-0' />
+                <FaEnvelope className='shrink-0' />
                 amkam@lenosol.com
               </p>
               <p className='text-slate-100 flex gap-2 items-center mb-2'>
-                <FaPhone className='flex-shrink-0' />
+                <FaPhone className='shrink-0' />
                 +23276716997
               </p>
             </div>

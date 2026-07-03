@@ -50,7 +50,7 @@ const Testimonials = () => {
             What People Say <span className='font-thin'>About Us</span>
           </h2>
 
-          <div className='relative min-h-[300px] mt-12'>
+          <div className='relative min-h-75 mt-12'>
             <AnimatePresence mode='wait'>
               <motion.div
                 key={index}
