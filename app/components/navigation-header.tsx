@@ -107,7 +107,7 @@ const NavigationHeader = () => {
             exit={{ x: "100%" }}
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
             // Added flex, flex-col, and items-end to align everything to the right
-            className='lg:hidden fixed top-0 right-0 h-full w-[300px] bg-[#18262a] z-[110] p-10 shadow-2xl flex flex-col items-end'
+            className='lg:hidden fixed top-0 right-0 h-full w-75 bg-[#18262a] z-110 p-10 shadow-2xl flex flex-col items-end'
           >
             <button
               onClick={() => setIsOpen(false)}
