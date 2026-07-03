@@ -1,190 +1,87 @@
 "use client";
-
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaFacebook, FaLinkedinIn, FaPlus, FaYoutube } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaLinkedinIn,
+  FaPlus,
+  FaTimes,
+  FaYoutube,
+} from "react-icons/fa";
 import { FaX } from "react-icons/fa6";
-
 import teamMember1 from "@/app/images/team-member.png";
-import { useState } from "react";
+
+const teamMembers = [
+  { id: 1, name: "Amadu Kamara", role: "C.E.O & Founder" },
+  { id: 2, name: "Samuel Amkam", role: "C.T.O & Lead Dev" },
+  { id: 3, name: "Ejatu Bah", role: "H.R Manager" },
+  { id: 4, name: "Dev Amkam", role: "FullStack Dev" },
+  { id: 5, name: "Sarah Johnson", role: "UI/UX Designer" },
+  { id: 6, name: "Michael Scott", role: "Project Manager" },
+  { id: 7, name: "Jane Doe", role: "QA Engineer" },
+  { id: 8, name: "Robert Smith", role: "Cloud Architect" },
+];
 
 const TeamPage = () => {
-  const [socialToggle1, setSocialToggle1] = useState(false);
-  const [socialToggle2, setSocialToggle2] = useState(false);
-  const [socialToggle3, setSocialToggle3] = useState(false);
-  const [socialToggle4, setSocialToggle4] = useState(false);
+  const [activeId, setActiveId] = useState<number | null>(null);
 
   return (
-    <section className='contact-us'>
-      <div className='mt-10 pl-16 px-40'>
-        <div className='flex justify-center'>
-          <div className='pt-10 pb-8'>
-            <h2 className='text-slate-100 font-bold text-3xl md:text-4xl lg:text-6xl mt-3 text-center'>
-              Our Team
-            </h2>
-            <div className='mt-10 flex justify-center'>
-              <div className='flex gap-3 items-center'>
-                <p className='text-slate-200 text-xl font-bold text-center'>
-                  Home
-                </p>
-                <div className='h-2 w-2 bg-amber-50 rounded-full'></div>
-                <p className='text-cyan-500 text-xl font-bold text-center'>
-                  Our Team
-                </p>
-              </div>
-            </div>
-          </div>
+    <section className='home-teams py-20'>
+      {/* Header */}
+      <div className='container mx-auto px-6 text-center mb-16'>
+        <h2 className='text-white font-bold text-5xl'>Our Team</h2>
+        <div className='mt-6 flex justify-center items-center gap-3 text-lg font-bold'>
+          <span className='text-slate-300'>Home</span>
+          <div className='h-2 w-2 bg-amber-50 rounded-full'></div>
+          <span className='text-cyan-500'>Our Team</span>
         </div>
       </div>
 
-      <h2
-        id='footer-text'
-        className='font-bold text-[9.1vw] text-center text-slate-400'
-      >
-        Our <span className='text-cyan-200'>Professional</span>{" "}
-        <span className='text-cyan-500'>Team</span>
-      </h2>
-
-      <div className='mt-6 px-42'>
+      {/* Team Grid */}
+      <div className='container mx-auto px-6'>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
-          {/* Team Member 1 */}
-          <div
-            className='w-full border p-2 border-gray-500 pb-4 md:pb-6'
-            onClick={() => setSocialToggle1(!socialToggle1)}
-          >
-            <Image src={teamMember1} alt='Team Member 1' className='w-full' />
+          {teamMembers.map((member) => (
             <div
-              className='flex justify-center items-center mb-6 relative'
-              onClick={() => setSocialToggle1(!socialToggle1)}
+              key={member.id}
+              className='border border-slate-700 p-3 bg-[#1d2d31] transition-transform duration-300'
             >
-              <div className='w-12 h-12 bg-cyan-100 rounded-full flex items-center justify-center -mt-5 cursor-pointer'>
-                <FaPlus />
-              </div>
-              {socialToggle1 && (
-                <div className='bg-cyan-600 py-5 mb-4 px-8 absolute flex items-center gap-4 transition-all ease-in-out duration-500'>
-                  <Link href='#facebook'>
-                    <FaFacebook className='text-slate-50' size={20} />
-                  </Link>
-                  <Link href='#facebook'>
-                    <FaLinkedinIn className='text-slate-50' size={20} />
-                  </Link>
-                  <Link href='#facebook'>
-                    <FaX className='text-slate-50' size={18} />
-                  </Link>
-                  <Link href='#facebook'>
-                    <FaYoutube className='text-slate-50' size={20} />
-                  </Link>
-                </div>
-              )}
-            </div>
-            <h4 className='text-center text-xl text-slate-50 font-bold'>
-              Amadu Kamara
-            </h4>
-            <p className='text-center text-slate-200 mt-1'>C.E.0 & Founder</p>
-          </div>
+              <Image src={teamMember1} alt={member.name} className='w-full' />
 
-          {/* Team Member 2 */}
-          <div
-            className='w-full border p-2 border-gray-500 pb-4 md:pb-6'
-            onClick={() => setSocialToggle2(!socialToggle2)}
-          >
-            <Image src={teamMember1} alt='Team Member 1' className='w-full' />
-            <div className='flex justify-center items-center mb-6'>
-              <div className='w-12 h-12 bg-cyan-100 rounded-full flex items-center justify-center -mt-5 cursor-pointer'>
-                <FaPlus />
-              </div>
-              {socialToggle2 && (
-                <div className='bg-cyan-600 py-5 mb-4 px-8 absolute flex items-center gap-4 transition-all ease-in-out duration-500'>
-                  <Link href='#facebook'>
-                    <FaFacebook className='text-slate-50' size={20} />
-                  </Link>
-                  <Link href='#facebook'>
-                    <FaLinkedinIn className='text-slate-50' size={20} />
-                  </Link>
-                  <Link href='#facebook'>
-                    <FaX className='text-slate-50' size={18} />
-                  </Link>
-                  <Link href='#facebook'>
-                    <FaYoutube className='text-slate-50' size={20} />
-                  </Link>
-                </div>
-              )}
-            </div>
-            <h4 className='text-center text-xl text-slate-50 font-bold'>
-              Samuel Amkam
-            </h4>
-            <p className='text-center text-slate-200 mt-1'>
-              C.T.O & Lead Developer
-            </p>
-          </div>
+              <div className='flex justify-center relative h-12 mt-[-24px]'>
+                <button
+                  onClick={() =>
+                    setActiveId(activeId === member.id ? null : member.id)
+                  }
+                  className='w-12 h-12 bg-cyan-100 rounded-full flex items-center justify-center hover:bg-cyan-500 hover:text-white transition-all z-10'
+                >
+                  {activeId === member.id ? <FaTimes /> : <FaPlus />}
+                </button>
 
-          {/* Team Member 3 */}
-          <div
-            className='w-full border p-2 border-gray-500 pb-4 md:pb-6'
-            onClick={() => setSocialToggle3(!socialToggle3)}
-          >
-            <Image src={teamMember1} alt='Team Member 1' className='w-full' />
-            <div className='flex justify-center items-center mb-6'>
-              <div className='w-12 h-12 bg-cyan-100 rounded-full flex items-center justify-center -mt-5 cursor-pointer'>
-                <FaPlus />
+                {activeId === member.id && (
+                  <div className='absolute bottom-16 bg-cyan-600 py-3 px-6 flex items-center gap-4 shadow-xl z-20'>
+                    <Link href='#'>
+                      <FaFacebook className='text-white' />
+                    </Link>
+                    <Link href='#'>
+                      <FaLinkedinIn className='text-white' />
+                    </Link>
+                    <Link href='#'>
+                      <FaX className='text-white' />
+                    </Link>
+                    <Link href='#'>
+                      <FaYoutube className='text-white' />
+                    </Link>
+                  </div>
+                )}
               </div>
-              {socialToggle3 && (
-                <div className='bg-cyan-600 py-5 mb-4 px-8 absolute flex items-center gap-4 transition-all ease-in-out duration-500'>
-                  <Link href='#facebook'>
-                    <FaFacebook className='text-slate-50' size={20} />
-                  </Link>
-                  <Link href='#facebook'>
-                    <FaLinkedinIn className='text-slate-50' size={20} />
-                  </Link>
-                  <Link href='#facebook'>
-                    <FaX className='text-slate-50' size={18} />
-                  </Link>
-                  <Link href='#facebook'>
-                    <FaYoutube className='text-slate-50' size={20} />
-                  </Link>
-                </div>
-              )}
-            </div>
-            <h4 className='text-center text-xl text-slate-50 font-bold'>
-              Ejatu Bah
-            </h4>
-            <p className='text-center text-slate-200 mt-1'>H.R Manager</p>
-          </div>
 
-          {/* Team Member 4 */}
-          <div
-            className='w-full border p-2 border-gray-500 pb-4 md:pb-6'
-            onClick={() => setSocialToggle4(!socialToggle4)}
-          >
-            <Image src={teamMember1} alt='Team Member 1' className='w-full' />
-            <div className='flex justify-center items-center mb-6'>
-              <div className='w-12 h-12 bg-cyan-100 rounded-full flex items-center justify-center -mt-5 cursor-pointer'>
-                <FaPlus />
+              <div className='text-center mt-6 pb-6'>
+                <h4 className='text-xl text-white font-bold'>{member.name}</h4>
+                <p className='text-cyan-400 mt-1'>{member.role}</p>
               </div>
-              {socialToggle4 && (
-                <div className='bg-cyan-600 py-5 mb-4 px-8 absolute flex items-center gap-4 transition-all ease-in-out duration-500'>
-                  <Link href='#facebook'>
-                    <FaFacebook className='text-slate-50' size={20} />
-                  </Link>
-                  <Link href='#facebook'>
-                    <FaLinkedinIn className='text-slate-50' size={20} />
-                  </Link>
-                  <Link href='#facebook'>
-                    <FaX className='text-slate-50' size={18} />
-                  </Link>
-                  <Link href='#facebook'>
-                    <FaYoutube className='text-slate-50' size={20} />
-                  </Link>
-                </div>
-              )}
             </div>
-            <h4 className='text-center text-xl text-slate-50 font-bold'>
-              Dev Amkam
-            </h4>
-            <p className='text-center text-slate-200 mt-1'>
-              FullStack Developer
-            </p>
-          </div>
+          ))}
         </div>
       </div>
     </section>
