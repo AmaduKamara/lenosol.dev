@@ -57,7 +57,7 @@ const Teams = () => {
               className='w-full grayscale hover:grayscale-0 transition-all duration-500'
             />
 
-            <div className='flex justify-center relative h-12 mt-[-24px]'>
+            <div className='flex justify-center relative h-12 -mt-6'>
               <button
                 onClick={() => setActiveId(activeId === index ? null : index)}
                 className='w-12 h-12 bg-cyan-100 rounded-full flex items-center justify-center hover:bg-cyan-500 hover:text-white transition-colors'

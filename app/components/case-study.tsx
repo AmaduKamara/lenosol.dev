@@ -73,7 +73,7 @@ const CaseStudy = () => {
             {projects.map((projectItem) => (
               <div
                 key={projectItem.id}
-                className='w-full flex-shrink-0 flex flex-col md:flex-row gap-12 items-center p-6 md:p-16 border border-slate-700 bg-[#1d2d31]'
+                className='w-full shrink-0 flex flex-col md:flex-row gap-12 items-center p-6 md:p-16 border border-slate-700 bg-[#1d2d31]'
               >
                 <div className='md:w-1/2'>
                   <p className='text-cyan-400 font-bold'>

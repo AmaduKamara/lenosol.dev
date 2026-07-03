@@ -1,93 +1,100 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { MdKeyboardArrowRight } from "react-icons/md";
-
-import amkam from "../images/Amkam.jpg";
 import { FaEnvelope, FaUser } from "react-icons/fa";
+import amkam from "../images/Amkam.jpg";
 
 const WorkInquiry = () => {
   return (
-    <div className='flex items-center gap-16 mt-16 pr-40'>
-      <div className='w-5/9 relative clear-start'>
-        <Image src={amkam} alt='Amkam' className='w-full' />
-        <div className='bg-cyan-500 w-1/2 absolute bottom-0 right-0 p-10'>
-          <p className='text-slate-200 font-bold text-lg'>Work Inquiry</p>
-          <h4 className='mt-5 text-5xl text-slate-50 font-bold'>
-            Let&apos;s Build Your Next Project!
-          </h4>
-          <Link href='/contact' className='mt-10 block'>
-            <button
-              type='button'
-              className='flex items-center cursor-pointer py-4 px-6  bg-cyan-50 text-cyan-950 hover:text-cyan-50 font-bold border border-cyan-50 hover:bg-transparent transition-all ease-in-out duration-300 rounded-lg'
-            >
-              View Our Teams
-              <MdKeyboardArrowRight size={20} />
-            </button>
-          </Link>
-        </div>
-      </div>
-
-      <form className='w-4/9 bg-slate-100 p-10 rounded'>
-        <h3 className='text-cyan-950 font-bold text-center text-4xl'>
-          Need Help For a Project
-        </h3>
-        <p className='mt-3 text-center text-xl text-gray-600'>
-          We are ready to help with your next project. Let&apos;s work together
-        </p>
-
-        <div className='mt-6'>
-          <div className='flex gap-4 items-center'>
-            <div className='flex items-center bg-white py-2 md:py-3 px-5 flex-1 relative'>
-              <input
-                type='text'
-                placeholder='Name'
-                className='focus:outline-none w-full pr-5'
-              />
-              <FaUser className='absolute top-0 right-0 mr-5 mt-4 text-gray-500' />
-            </div>
-            <div className='flex items-center bg-white py-2 md:py-3 px-5 flex-1 relative'>
-              <input
-                type='text'
-                placeholder='Name'
-                className='focus:outline-none w-full pr-5'
-              />
-              <FaEnvelope className='absolute top-0 right-0 mr-5 mt-4 text-gray-500' />
-            </div>
-          </div>
-          <div className='flex items-center bg-white py-2 md:py-3 px-5 flex-1 relative mt-4'>
-            <select title='Services' className='focus:outline-none w-full pr-5'>
-              <option>Choose Services</option>
-              <option value=''>Web Design</option>
-              <option value=''>Web Wevelopment</option>
-              <option value=''>UI/UX Design</option>
-              <option value=''>IT Consultancy</option>
-              <option value=''>Graphics Design</option>
-              <option value=''>SaaS Development</option>
-            </select>
-          </div>
-
-          <div className='flex items-center bg-white py-2 md:py-3 px-5 flex-1 relative mt-4'>
-            <textarea
-              rows={4}
-              placeholder='Message'
-              className='w-full focus:outline-none'
-            ></textarea>
-          </div>
-
-          <div>
-            <Link href='/contact' className='mt-8 block'>
-              <button
-                type='button'
-                className='flex items-center cursor-pointer py-4 px-6  bg-cyan-500 text-slate-50 hover:text-cyan-950 font-bold border border-cyan-500 hover:bg-transparent transition-all ease-in-out duration-300 rounded-lg'
-              >
-                View Our Teams
-                <MdKeyboardArrowRight size={20} />
+    <section className='container mx-auto px-6 py-20'>
+      <div className='grid grid-cols-1 lg:grid-cols-2 gap-10 items-start'>
+        {/* Left: Image & Call to Action */}
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          className='relative'
+        >
+          <Image
+            src={amkam}
+            alt='Work Inquiry'
+            className='w-full h-125 object-cover rounded-xl'
+          />
+          <div className='bg-cyan-500 p-8 md:p-10 absolute bottom-0 right-0 w-[90%] md:w-[80%] rounded-tl-2xl'>
+            <p className='text-white font-bold text-lg opacity-90'>
+              Work Inquiry
+            </p>
+            <h4 className='mt-1 text-2xl md:text-4xl text-white font-bold leading-tight'>
+              Let&apos;s Build Your Next Project!
+            </h4>
+            <Link href='/contact' className='mt-8 inline-block'>
+              <button className='flex items-center gap-2 py-3 px-6 bg-white text-cyan-900 font-bold rounded-lg hover:bg-slate-100 transition-all'>
+                Get In Touch <MdKeyboardArrowRight size={20} />
               </button>
             </Link>
           </div>
-        </div>
-      </form>
-    </div>
+        </motion.div>
+
+        {/* Right: Form */}
+        <motion.form
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          className='bg-slate-100 p-8 md:p-10 rounded-xl shadow-lg'
+        >
+          <h3 className='text-cyan-950 font-bold text-3xl md:text-4xl text-center'>
+            Need Help?
+          </h3>
+          <p className='mt-3 text-center text-lg text-gray-600'>
+            We are ready to start your next project.
+          </p>
+
+          <div className='mt-8 space-y-4'>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+              <div className='flex items-center bg-white py-3 px-4 rounded border border-gray-200'>
+                <input
+                  type='text'
+                  placeholder='Name'
+                  className='focus:outline-none w-full bg-transparent'
+                />
+                <FaUser className='text-gray-400' />
+              </div>
+              <div className='flex items-center bg-white py-3 px-4 rounded border border-gray-200'>
+                <input
+                  type='email'
+                  placeholder='Email'
+                  className='focus:outline-none w-full bg-transparent'
+                />
+                <FaEnvelope className='text-gray-400' />
+              </div>
+            </div>
+
+            <select className='w-full bg-white py-3 px-4 rounded border border-gray-200 focus:outline-none text-gray-500'>
+              <option>Choose Service</option>
+              <option>Web Design</option>
+              <option>Web Development</option>
+              <option>UI/UX Design</option>
+              <option>IT Consultancy</option>
+            </select>
+
+            <textarea
+              rows={4}
+              placeholder='Your Message'
+              className='w-full bg-white py-3 px-4 rounded border border-gray-200 focus:outline-none'
+            ></textarea>
+
+            <button
+              type='button'
+              className='w-full py-4 bg-cyan-500 text-white font-bold rounded-lg hover:bg-cyan-600 transition-all flex justify-center items-center gap-2'
+            >
+              Send Message <MdKeyboardArrowRight size={20} />
+            </button>
+          </div>
+        </motion.form>
+      </div>
+    </section>
   );
 };
 
