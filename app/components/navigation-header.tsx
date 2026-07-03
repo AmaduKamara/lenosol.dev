@@ -25,7 +25,7 @@ const NavigationHeader = () => {
   ];
 
   return (
-    <header className='sticky top-0 z-[100] bg-[#18262a] shadow-2xl'>
+    <header className='sticky top-0 z-100 bg-[#18262a] shadow-2xl'>
       <TopBar />
       <div className='border-t border-b border-gray-600 px-6 md:pl-16 flex justify-between items-center'>
         {/* Logo */}
@@ -106,7 +106,7 @@ const NavigationHeader = () => {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className='lg:hidden fixed top-0 right-0 h-full w-75 bg-[#18262a] z-[110] p-10 shadow-2xl flex flex-col items-end'
+            className='lg:hidden fixed top-0 right-0 h-full w-75 bg-[#18262a] z-110 p-10 shadow-2xl flex flex-col items-end'
           >
             <button
               onClick={() => setIsOpen(false)}

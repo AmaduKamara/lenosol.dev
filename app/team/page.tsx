@@ -48,7 +48,7 @@ const TeamPage = () => {
             >
               <Image src={teamMember1} alt={member.name} className='w-full' />
 
-              <div className='flex justify-center relative h-12 mt-[-24px]'>
+              <div className='flex justify-center relative h-12 -mt-6'>
                 <button
                   onClick={() =>
                     setActiveId(activeId === member.id ? null : member.id)
