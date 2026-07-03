@@ -10,17 +10,17 @@ import { FaLocationPin, FaX } from "react-icons/fa6";
 
 const TopBar = () => {
   return (
-    <div className='py-2 px-16 flex justify-between'>
+    <div className='py-2 px-16 hidden md:flex justify-between'>
       <div className='flex gap-5'>
-        <span className='text-slate-200 flex items-center gap-3'>
+        <span className='text-slate-200 flex items-center gap-3 text-sm'>
           {" "}
           <FaLocationPin size={12} /> 6 John Thorpe, Rokel, Freetown
         </span>
-        <span className='text-slate-200 flex items-center gap-3'>
+        <span className='text-slate-200 flex items-center gap-3 text-sm'>
           <FaEnvelope size={12} />
           amkam@lenosol.com
         </span>
-        <span className='text-slate-200 flex items-center gap-3'>
+        <span className='text-slate-200 flex items-center gap-3 text-sm'>
           {" "}
           <FaPhone size={12} /> +23276 716 997
         </span>
@@ -30,12 +30,12 @@ const TopBar = () => {
         <div className='flex gap-5 items-center'>
           <ul className='flex gap-5 items-center'>
             <li className='font-bold'>
-              <Link href='/help' className='text-slate-200'>
+              <Link href='/help' className='text-slate-200 text-sm'>
                 Support
               </Link>
             </li>
             <li className='font-bold'>
-              <Link href='/help' className='text-slate-200'>
+              <Link href='/help' className='text-slate-200 text-sm'>
                 FAQs
               </Link>
             </li>
