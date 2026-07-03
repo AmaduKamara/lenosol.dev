@@ -7,7 +7,7 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 
 import ClientStats from "./client-stats";
 import Faqs from "./faqs";
-import lenosolLogo from "@/app/images/lonosol-logo.png";
+import lenosolLogo from "@/app/images/lenosol.png";
 import amkam from "@/app/images/Amkam.jpg";
 
 const data = [
@@ -85,7 +85,7 @@ const HomeAbout = () => {
             solutions tailored to your unique needs.
           </p>
           <Link href='/services' className='inline-block mt-8'>
-            <button className='flex items-center gap-2 bg-cyan-500 py-4 px-8 text-white hover:bg-cyan-600 transition-all'>
+            <button className='flex items-center gap-2 bg-cyan-500 py-4 px-8 text-white hover:bg-cyan-600 transition-all cursor-pointer'>
               Learn More <MdKeyboardArrowRight size={20} />
             </button>
           </Link>
